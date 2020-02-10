@@ -3,6 +3,8 @@
 A mobile app (Android/iOS) for people drinking celery juice.
 Highly inspired by @medicalmedium. 🥬🍓
 
+![header-img](https://raw.githubusercontent.com/eliburgi/celerywithme/master/image.png)
+
 ## Features
 - [x] user can see how many people drink celery juice daily (live-ticker)
 - [x] user can see yesterday´s score and the current highscore
