@@ -1,0 +1,30 @@
+requirements
+    - user can see live how many people drank celery juice today
+    - user can also see how many people drank celery juice yesterday and a general highscore
+    - user can drink a celery juice which adds him to people who drank celery juice today (increments today score)
+        - user can only drink once per day 
+        - user can only drink if he is currently live
+    - user has the option to retry going live again after it failed
+    - after drinking, the user can share exactly one emote with the other people (live)
+    - user can see all the emotes being shared
+
+classes
+    - Server: handles the communication/protocol with the server
+    - DrinkBloc: contains the business logic concerned with drinking and live scores
+    - EmoteBloc: contains the business logic for sending and receiving emotes  
+
+client-server protocol
+    c -> s: connects
+        c <- s: scores if server accepts client
+        c <- s: error if server cannot accept the client
+    
+    ... c <- s: today score changed
+    ... c <- s: scores updated
+    ... c <- s: emote shared
+    ... c -> s: drink 
+    ... c -> s: share emote
+
+    c -> s: disconnect
+    c <- s: ok
+
+what if client loses internet connection? how to properly disconnect?

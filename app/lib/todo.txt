@@ -1,0 +1,2 @@
+- ConnectedView:
+    - hide DrinkButton if user drank already today 
